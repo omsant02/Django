@@ -31,6 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login_page, name="login_page"),
     path('register/', register, name="register"),
+    path('logout/', logout_page, name="logout_page"),
 
     # dynamic route
     path('delete-receipe/<id>/',delete_receipe,name='delete_receipe'),
