@@ -20,4 +20,12 @@ def receipes(request):
         return redirect('/receipes/')
 
 
-    return render(request,'receipes.html')
+    queryset = Receipe.objects.all()
+    context = {'receipes':queryset}    
+    return render(request,'receipes.html',context)
+
+# dynamic route
+def delete_receipe(request, id):
+    queryset = Receipe.objects.get(id=id)
+    queryset.delete()
+    return redirect('/receipes/')
