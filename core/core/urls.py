@@ -31,7 +31,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # dynamic route
-    path('delete-receipe/<id>/',delete_receipe,name='delete_receipe')
+    path('delete-receipe/<id>/',delete_receipe,name='delete_receipe'),
+
+    path('update-receipe/<id>/',update_receipe,name='update_receipe')
 ]
 
 if settings.DEBUG:
